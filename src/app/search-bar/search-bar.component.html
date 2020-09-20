@@ -1,0 +1,126 @@
+
+  <div class="col-sm-8 center">
+    <p class="header">Acme Search</p>
+  </div>
+
+  <form class="form-inline" action="#">
+    <div class="form-group mx-sm-2 mb-2">
+      <input type="text" class="form-control"  (keyup)="onKey($event)" (keydown.enter)="$event.preventDefault()"  name="searchTerm" placeholder="Search..">
+
+    </div>
+    <button type="button" class="btn btn-success mb-2" (click)="search($event)">Search</button>
+  </form>
+
+  <div class="col-sm-8 center" *ngIf="noResult">
+    <p class="error">Opps! We found no results for your search. Please check your spelling or try something else... :(</p>
+  </div>
+
+  <div class="col-sm-8 center" *ngIf="emptySearch">
+    <p class="error">Nothing was entered! Please type something next time :)</p>
+  </div>
+
+  <div class="col-sm-8 center" *ngIf="resultHeader">
+    <p class="success"><u>Here are your results</u> :)</p>
+  </div>
+
+  <div class="col-sm-8 center" *ngIf="calendarResult.length > 0">
+    <p class="title"><u>Calendar Info</u></p>
+    <table class="table" >
+      <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Invitees</th>
+        <th scope="col">Date</th>
+      </tr>
+      </thead>
+      <tbody >
+      <tr *ngFor = "let row of calendarResult">
+        <td *ngFor = "let column of calendarHeaders">{{ row[column] }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-sm-8 center" *ngIf="contactsResult.length > 0">
+    <p class="title"><u>Contacts Info</u></p>
+    <table class="table" >
+      <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Company</th>
+        <th scope="col">Emails</th>
+        <th scope="col">Phones</th>
+        <th scope="col">Last Contact</th>
+      </tr>
+      </thead>
+      <tbody >
+      <tr *ngFor = "let row of contactsResult">
+        <td *ngFor = "let column of contactsHeaders">{{ row[column] }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-sm-8 center" *ngIf="dropBoxResult.length > 0">
+    <p class="title"><u>DropBox Info</u></p>
+    <table class="table" >
+      <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Shared with</th>
+        <th scope="col">Path to file</th>
+        <th scope="col">Created on</th>
+      </tr>
+      </thead>
+      <tbody >
+      <tr *ngFor = "let row of dropBoxResult">
+        <td *ngFor = "let column of dropBoxHeaders">{{ row[column] }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-sm-8 center" *ngIf="slackResult.length > 0">
+    <p class="title"><u>Slack Info</u></p>
+    <table class="table" >
+      <thead>
+      <tr>
+        <th scope="col">Channel</th>
+        <th scope="col">Author</th>
+        <th scope="col">Message</th>
+        <th scope="col">Time sent</th>
+      </tr>
+      </thead>
+      <tbody >
+      <tr *ngFor = "let row of slackResult">
+        <td *ngFor = "let column of slackHeaders">{{ row[column] }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-sm-8 center" *ngIf="tweetResult.length > 0">
+    <p class="title"><u>Tweet Info</u></p>
+    <table class="table" >
+      <thead>
+      <tr>
+        <th scope="col">User</th>
+        <th scope="col">Message</th>
+        <th scope="col">Time sent</th>
+      </tr>
+      </thead>
+      <tbody >
+      <tr *ngFor = "let row of tweetResult">
+        <td *ngFor = "let column of tweetHeaders">{{ row[column] }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+
+

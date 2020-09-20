@@ -1,0 +1,36 @@
+@import "/node_modules/bootstrap/scss/bootstrap.scss";
+form{
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center }
+
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.error {
+ color: red;
+ font-size: 24px;
+ text-align: center;
+}
+
+.success {
+ color: green;
+ font-size: 24px;
+ text-align: center;
+}
+
+.title{
+ color: blue;
+ font-size: 20px;
+ text-align: center;
+}
+
+.header {
+ color: purple;
+ font-size: 46px;
+ text-align: center;
+}
