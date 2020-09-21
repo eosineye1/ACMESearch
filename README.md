@@ -5,7 +5,7 @@ Angular 8 or higher `npm install -g @angular/cli`
 
 ## Development server
 
-In a terminal, in the project directory, run `ng build` to build the project then `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+In a terminal, in the project directory, run `npm install --save-dev @angular-devkit/build-angularrun`, then run `ng build` to build the project, then `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## Running unit tests
 
