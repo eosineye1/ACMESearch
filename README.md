@@ -7,14 +7,6 @@ Angular 8 or higher `npm install -g @angular/cli`
 
 In a terminal, in the project directory, run `npm install --save-dev @angular-devkit/build-angular`, then run `ng build` to build the project, then `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
 ## Additional Features
 
 I implemented an additional feature where the result change dynamically based of 
